@@ -54,12 +54,12 @@ const Header = ({ showA, toggleShowA, cart }) => {
                 alt=""
                 width="20px"
                 height="20px"
-                class="cart-icon-pic"
+                className="cart-icon-pic"
                 onClick={toggleShowA}
               />
             </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              <img src={avatarPic} alt="" width="40px" class="avater-pic" />
+              <img src={avatarPic} alt="" width="40px" className="avater-pic" />
             </Nav.Link>
           </Nav>
         </Container>

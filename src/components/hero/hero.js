@@ -95,7 +95,7 @@ const Hero = ({
                 />
               </div>
               <div className="d-flex pt-3">
-                <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+                <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
                   <img
                     src={thumbone}
                     alt=""
@@ -106,7 +106,7 @@ const Hero = ({
                 </Button>
                 <div className="ms-3">
                   {" "}
-                  <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+                  <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
                     <img
                       src={thumbtwo}
                       alt=""
@@ -117,7 +117,7 @@ const Hero = ({
                   </Button>
                 </div>
                 <div className="ms-3">
-                  <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+                  <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
                     <img
                       src={thumbthree}
                       alt=""
@@ -128,7 +128,7 @@ const Hero = ({
                   </Button>
                 </div>
                 <div className="ms-3">
-                  <Button variant="thumb" classname=" ms-3 rounded-prime ">
+                  <Button variant="thumb" className=" ms-3 rounded-prime ">
                     <img
                       src={thumbfour}
                       alt=""
@@ -195,7 +195,7 @@ const Hero = ({
                 </div>
                 <div>
                   <p className="d-flex " id="p-buttons">
-                    <div className="d-flex w-100" id="counter">
+                    <span className="d-flex w-100" id="counter">
                       <button className="p-3 bg__gray cus-text-o" onClick={Sub}>
                         <strong>-</strong>
                       </button>
@@ -205,7 +205,7 @@ const Hero = ({
                       <button className="p-3 bg__gray cus-text-o" onClick={Add}>
                         <strong>+</strong>
                       </button>
-                    </div>
+                    </span>
                     <Button
                       variant="orange"
                       className="rounded-prime shadow-lg ms-md-4 px-4 w-100"
@@ -246,7 +246,7 @@ const Hero = ({
             />
           </div>
           <div className="d-flex pt-3">
-            <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+            <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
               <img
                 src={thumbone}
                 alt=""
@@ -257,7 +257,7 @@ const Hero = ({
             </Button>
             <div className="ms-3">
               {" "}
-              <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+              <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
                 <img
                   src={thumbtwo}
                   alt=""
@@ -268,7 +268,7 @@ const Hero = ({
               </Button>
             </div>
             <div className="ms-3">
-              <Button variant="thumb" classname="p-1 ms-3 rounded-prime ">
+              <Button variant="thumb" className="p-1 ms-3 rounded-prime ">
                 <img
                   src={thumbthree}
                   alt=""
@@ -279,7 +279,7 @@ const Hero = ({
               </Button>
             </div>
             <div className="ms-3">
-              <Button variant="thumb" classname=" ms-3 rounded-prime ">
+              <Button variant="thumb" className=" ms-3 rounded-prime ">
                 <img
                   src={thumbfour}
                   alt=""
