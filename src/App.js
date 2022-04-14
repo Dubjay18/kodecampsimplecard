@@ -1,57 +1,122 @@
 import React, { useState } from "react";
-import { Container, Toast } from "react-bootstrap";
-
-import "./App.css";
-import Header from "./components/header/header";
-import Hero from "./components/hero/hero";
-import Items from "./components/item/Items";
-import pre from "./images/image-product-1.jpg";
-import pre2 from "./images/image-product-2.jpg";
-import pre3 from "./images/image-product-3.jpg";
-import pre4 from "./images/image-product-4.jpg";
+import {
+  Container,
+  Form,
+  Button,
+  Card,
+  Toast,
+  FloatingLabel,
+} from "react-bootstrap";
 
 function App() {
-  const [showA, setShowA] = useState(false);
-  const num = 0;
-  const [cart, setCart] = useState([]);
-  const data = [`${pre}`, `${pre2}`, `${pre3}`, `${pre4}`];
-  const [i, setI] = useState(0);
-  const [numItems, setNumItems] = useState(num);
-  const removeCart = (el) => {
-    cart.splice(el, el + 1);
-    let cartArray = [...cart];
-    setCart((cart) => [...cartArray]);
-  };
-  const addToCart = () => {
-    let cartArray = { id: i, img_url: data[i], count: numItems };
-    setCart((cart) => [...cart, cartArray]);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [female, setFemale] = useState("");
+  const [address, setAddress] = useState("");
+  const [bio, setBio] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const submit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
   };
 
-  const toggleShowA = () => setShowA(!showA);
   return (
-    <Container>
-      <div className="App w-100">
-        <Header showA={showA} toggleShowA={toggleShowA} cart={cart} />
-        <Hero
-          showA={showA}
-          toggleShowA={toggleShowA}
-          cart={cart}
-          addToCart={addToCart}
-          i={i}
-          setI={setI}
-          setCart={setCart}
-          numItems={numItems}
-          setNumItems={setNumItems}
-        />
-        <Toast show={showA} onClose={toggleShowA}>
-          <Toast.Header>
-            <strong className="me-auto">Cart</strong>
-          </Toast.Header>
-          <Toast.Body>
-            <Items cart={cart} removeCart={removeCart} />
-          </Toast.Body>
-        </Toast>
+    <Container className="d-flex align-items-center justify-content-center">
+      <div className="App w-100 p-5 ">
+        <Form className="bg-dark text-white shadow-lg p-5">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Firstname</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your Firstname"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>lastname</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your Lastname"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Check
+              inline
+              label="Male"
+              name="male"
+              type={"radio"}
+              id="Gender"
+              onClick={() => setGender("Male")}
+            />
+            <Form.Check
+              inline
+              label="Female"
+              name="Gender"
+              type={"radio"}
+              id="Gender"
+              onClick={() => setGender("Female")}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Address</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </Form.Group>
+          <FloatingLabel
+            controlId="floatingTextarea"
+            label="Bio"
+            className="mb-3"
+          >
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a bio here"
+              value={bio}
+              onChange={(e) => setBio(e.target.value)}
+            />
+          </FloatingLabel>
+          <Button variant="primary" type="submit" onClick={submit}>
+            Submit
+          </Button>
+        </Form>
       </div>
+      {submitted && (
+        <>
+          <Card
+            style={{ width: "20rem" }}
+            className="bg-dark text-white shadow-lg "
+          >
+            <Card.Body>
+              <Card.Text>Firstname: {firstName}</Card.Text>{" "}
+              <Card.Text>lastName: {lastName}</Card.Text>
+              <Card.Text>Email: {email}</Card.Text>
+              <Card.Text>Gender: {gender}</Card.Text>
+              <Card.Text>Address: {address}</Card.Text>
+              <Card.Text>Bio: {bio}</Card.Text>
+            </Card.Body>
+          </Card>
+        </>
+      )}
     </Container>
   );
 }
