@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/kodecampsimplecard/static/css/main.9927c343.chunk.css",
+    "main.js": "/kodecampsimplecard/static/js/main.e068ebbf.chunk.js",
+    "main.js.map": "/kodecampsimplecard/static/js/main.e068ebbf.chunk.js.map",
+    "runtime-main.js": "/kodecampsimplecard/static/js/runtime-main.c0c996e8.js",
+    "runtime-main.js.map": "/kodecampsimplecard/static/js/runtime-main.c0c996e8.js.map",
+    "static/css/2.383c0125.chunk.css": "/kodecampsimplecard/static/css/2.383c0125.chunk.css",
+    "static/js/2.c674e90a.chunk.js": "/kodecampsimplecard/static/js/2.c674e90a.chunk.js",
+    "static/js/2.c674e90a.chunk.js.map": "/kodecampsimplecard/static/js/2.c674e90a.chunk.js.map",
+    "static/js/3.1c69d78b.chunk.js": "/kodecampsimplecard/static/js/3.1c69d78b.chunk.js",
+    "static/js/3.1c69d78b.chunk.js.map": "/kodecampsimplecard/static/js/3.1c69d78b.chunk.js.map",
+    "index.html": "/kodecampsimplecard/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/kodecampsimplecard/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.9927c343.chunk.css.map": "/kodecampsimplecard/static/css/main.9927c343.chunk.css.map",
+    "static/js/2.c674e90a.chunk.js.LICENSE.txt": "/kodecampsimplecard/static/js/2.c674e90a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0c996e8.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.c674e90a.chunk.js",
+    "static/css/main.9927c343.chunk.css",
+    "static/js/main.e068ebbf.chunk.js"
+  ]
+}
