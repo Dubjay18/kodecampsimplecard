@@ -21,3 +21,14 @@
     left: 50%;
   }
 }
+.card {
+  padding: 50px;
+  background-color: rgb(204, 219, 219) !important;
+  width: 700px;
+  margin-bottom: 100px;
+  font-family: cursive;
+}
+.mx-cus {
+  margin-right: 30%;
+  margin-left: 30%;
+}
